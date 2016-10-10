@@ -1,0 +1,71 @@
+.icons-custom-nav{
+	/*color: #3c737d;*/
+	font-size: 40px;
+	position: absolute;
+	left:15px;
+	top: 15px;
+}
+
+.icons-custom{
+	font-size: 100px;
+	margin-left:10px;
+	margin-top: 30px;	
+	color: #fff;
+}
+
+.text-white{
+	color: #fff;	
+}
+
+.card-custom{
+	background-color: #009688 !important;
+	height: 140px;
+	cursor: pointer;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+.footer-block{
+	width: 12.5%;
+	margin: 0;
+	left: auto;
+	right: auto;
+	float: left;
+	padding: 2px;
+}
+
+.icons-custom-footer{
+	margin-top: 5px;
+	width: 50px;
+	height: 50px;
+	padding-top: 5px;
+}
+
+.icons-custom-footer i{
+	font-size: 35px;
+	color: #fff;
+}
+
+.footer-block p{
+	font-size: 14px;
+	line-height: 1rem;	
+	margin-top: 0;
+}
+
+.footer-block h5{	
+	font-weight: bold;
+	margin: 0;
+}
+
+ .footer-block h6{
+ 	font-size: 1.1rem;
+ 	font-weight: bold;
+ }
