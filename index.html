@@ -18,293 +18,311 @@
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      <style type="text/css">
+        body, html{
+          height: 100%;
+        }
+      </style>
     </head>
 
     <body>
-      <div class="container">
-        <ul class="side-nav collection" id="mobile-demo">
-          <li class="collection-item avatar green-text text-darken-3 valign-wrapper">
-            <i class="fa fa-exclamation-circle  icons-custom-nav" aria-hidden="true"></i>            
-            <span class="title">Petición, Quejas, Reclamos y Sugerencias</span>
-            <!--<p></p>-->            
-          </li>
-          <li class="collection-item avatar green-text text-darken-3 valign-wrapper">
-            <i class="material-icons  icons-custom-nav">phonelink_setup</i>
-            <span class="title">APP POLIS</span>            
-          </li>
-          <li class="collection-item avatar green-text text-darken-3 valign-wrapper">
-            <i class="material-icons  icons-custom-nav">supervisor_account</i>
-            <span class="title">Violencia Intrafamiliar</span>            
-          </li>        
-          <li class="collection-item avatar green-text text-darken-3 valign-wrapper">
-            <i class="fa fa-gavel  icons-custom-nav" aria-hidden="true"></i>
-            <span class="title">Antecedentes Judiciales</span>            
-          </li>        
-          <li class="collection-item avatar green-text text-darken-3 valign-wrapper">
-            <i class="material-icons  icons-custom-nav">phonelink_lock</i>
-            <span class="title">Celulares Recuperados</span>            
-          </li>        
-          <li class="collection-item avatar green-text text-darken-3 valign-wrapper">
-            <i class="fa fa-building  icons-custom-nav" aria-hidden="true"></i>
-            <span class="title">Acceso a Información Pública</span>
-          </li>        
-          <li class="collection-item avatar green-text text-darken-3 valign-wrapper">            
-            <i class="fa fa-flask  icons-custom-nav" aria-hidden="true"></i>
-            <span class="title">Control de Sustancias Químicas SICOQ</span>
-          </li>
-          <li class="collection-item avatar green-text text-darken-3 valign-wrapper">          
-            <i class="fa fa-file-text  icons-custom-nav" aria-hidden="true"></i>            
-            <span class="title">Pérdida de Documentos y/o Elementos</span>
-          </li>
-          <li class="collection-item avatar green-text text-darken-3 valign-wrapper">          
-            <i class="fa fa-graduation-cap  icons-custom-nav" aria-hidden="true"></i>            
-            <span class="title">Red de Educadores</span>            
-          </li>          
-          <li class="collection-item avatar green-text text-darken-3 valign-wrapper">          
-            <i class="fa fa-car  icons-custom-nav" aria-hidden="true"></i>
-            <span class="title">Trámites de Vehículos</span>            
-          </li>
-          <li class="collection-item avatar green-text text-darken-3 valign-wrapper">
-            <i class="fa fa-female  icons-custom-nav" aria-hidden="true"></i>
-            <span class="title">Atención a Mujeres</span>            
-          </li>          
-        </ul>
-          <div id="ocultar">
-          <div class="row" style="margin-bottom: 0;">
-            <div class="col s12 m5">
-              <div class="card horizontal  card-custom">
-                <div class="card-image">
-                  <i class="fa fa-exclamation-circle icons-custom" aria-hidden="true"></i>                  
-                </div>
-                <div class="card-stacked">
-                  <div class="card-content text-white valign-wrapper">
-                    <p class="valign">Petición, Quejas, Reclamos y Sugerencias.</p>
-                  </div>
-                  <!--<div class="card-action">
-                    <a href="#">This is a link</a>
-                  </div>-->
-                </div>
-              </div>
-            </div>
-            <div class="col s6 m3 offset-m1">
-              <div class="card horizontal  card-custom">
-                <div class="card-image">
-                  <i class="material-icons icons-custom">phonelink_setup</i>        
-                </div>
-                <div class="card-stacked">
-                  <div class="card-content text-white valign-wrapper">
-                    <p class="valign">APP POLIS</p>
-                  </div>
-                  <!--<div class="card-action">
-                    <a href="#">This is a link</a>
-                  </div>-->
-                </div>
-              </div>
-            </div>
-            <div class="col s6 m2 offset-m1">
-              <div class="card horizontal  card-custom text-white button-collapse" data-activates="mobile-demo">
-                  <i class="fa fa-arrow-left" id="arrow-menu" aria-hidden="true" style="position:absolute;bottom:15px;left:15px;font-size: 50px;"></i>
-                  <i class="material-icons" style="position: absolute;font-size: 50px;top: 15px;right: 15px;">menu</i>
-              </div>
-            </div>
-          </div>
-          <div class="row" style="margin-bottom: 0;">
-            <div class="col s6 m3">
-              <div class="card horizontal  card-custom">
-                <div class="card-image">
-                  <i class="material-icons  icons-custom">supervisor_account</i>               
-                </div>
-                <div class="card-stacked">
-                  <div class="card-content text-white valign-wrapper">
-                    <p class="valign">Violencia Intrafamiliar</p>
-                  </div>
-                  <!--<div class="card-action">
-                    <a href="#">This is a link</a>
-                  </div>-->
-                </div>
-              </div>
-            </div>
-            <div class="col s6 m3">
-              <div class="card horizontal  card-custom">
-                <div class="card-image">
-                  <i class="fa fa-gavel  icons-custom" aria-hidden="true"></i>
-                </div>
-                <div class="card-stacked">
-                  <div class="card-content text-white valign-wrapper">
-                    <p class="valign">Antecedentes Judiciales</p>
-                  </div>
-                  <!--<div class="card-action">
-                    <a href="#">This is a link</a>
-                  </div>-->
-                </div>
-              </div>
-            </div>
-            <div class="col s6 m3">
-              <div class="card horizontal  card-custom">
-                <div class="card-image">
-                  <i class="material-icons  icons-custom">phonelink_lock</i>
-                </div>
-                <div class="card-stacked">
-                  <div class="card-content text-white valign-wrapper">
-                    <p class="valign">Celulares Recuperados</p>
-                  </div>
-                  <!--<div class="card-action">
-                    <a href="#">This is a link</a>
-                  </div>-->
-                </div>
-              </div>
-            </div>
-            <div class="col s6 m3">
-              <div class="card horizontal  card-custom">
-                <div class="card-image">
-                  <i class="fa fa-building  icons-custom" aria-hidden="true"></i>
-                </div>
-                <div class="card-stacked">
-                  <div class="card-content text-white valign-wrapper">
-                    <p class="valign">Acceso a Información Pública</p>
-                  </div>
-                  <!--<div class="card-action">
-                    <a href="#">This is a link</a>
-                  </div>-->
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div class="row" style="margin-bottom: 0;">
-            <div class="col s6 m3">
-              <div class="card horizontal  card-custom">
-                <div class="card-image">
-                  <i class="fa fa-flask icons-custom" aria-hidden="true"></i>                  
-                </div>
-                <div class="card-stacked">
-                  <div class="card-content text-white valign-wrapper">
-                    <p class="valign">Petición, Quejas, Reclamos y Sugerencias.</p>
-                  </div>
-                  <!--<div class="card-action">
-                    <a href="#">This is a link</a>
-                  </div>-->
-                </div>
-              </div>
-            </div>
-            <div class="col s6 m3">
-              <div class="card horizontal  card-custom">
-                <div class="card-image">
-                  <i class="fa fa-file-text icons-custom" aria-hidden="true"></i>
-                </div>
-                <div class="card-stacked">
-                  <div class="card-content text-white valign-wrapper">
-                    <p class="valign">Petición, Quejas, Reclamos y Sugerencias.</p>
-                  </div>
-                  <!--<div class="card-action">
-                    <a href="#">This is a link</a>
-                  </div>-->
-                </div>
-              </div>
-            </div>
-            <div class="col s6 m3">
-              <div class="card horizontal  card-custom">
-                <div class="card-image">
-                  <i class="fa fa-graduation-cap icons-custom" aria-hidden="true"></i>
-                </div>
-                <div class="card-stacked">
-                  <div class="card-content text-white valign-wrapper">
-                    <p class="valign">Petición, Quejas, Reclamos y Sugerencias.</p>
-                  </div>
-                  <!--<div class="card-action">
-                    <a href="#">This is a link</a>
-                  </div>-->
-                </div>
-              </div>
-            </div>
-            <div class="col s6 m3">
-              <div class="card horizontal  card-custom">
-                <div class="card-image">
-                  <i class="fa fa-car icons-custom" aria-hidden="true" style="font-size: 100px;margin-left:5px;margin-top: 30px;"></i>
-                </div>
-                <div class="card-stacked">
-                  <div class="card-content text-white valign-wrapper">
-                    <p class="valign">Petición, Quejas, Reclamos y Sugerencias.</p>
-                  </div>
-                  <!--<div class="card-action">
-                    <a href="#">This is a link</a>
-                  </div>-->
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div class="row">
-            <div class="col s6 m3">
-              <div class="card horizontal  card-custom">
-                <div class="card-image">
-                  <i class="fa fa-female icons-custom" aria-hidden="true"></i>             
-                </div>
-                <div class="card-stacked">
-                  <div class="card-content text-white valign-wrapper">
-                    <p class="valign">Atención a Mujeres</p>
-                  </div>
-                  <!--<div class="card-action">
-                    <a href="#">This is a link</a>
-                  </div>-->
-                </div>
-              </div>
-            </div>
-            <div class="col s6 m2">
-              <div class="card horizontal  card-custom">
-                <div class="card-image">
-                  <i class="fa fa-paw icons-custom" aria-hidden="true"></i>
-                </div>
-                <div class="card-stacked">
-                  <div class="card-content text-white valign-wrapper">
-                    <p class="valign">Maltrato Animal.</p>
-                  </div>
-                  <!--<div class="card-action">
-                    <a href="#">This is a link</a>
-                  </div>-->
-                </div>
-              </div>
-            </div>
-            <div class="col s6 m4">              
-
-              <div class="card horizontal card-custom" style="background-color: #fff !important;">
-                <div class="card-stacked">
-                  <div class="carousel carousel-slider center" data-indicators="true">
-                    <div class="carousel-fixed-item center">                      
-                      <a class="btn waves-effect white grey-text darken-text-2">button</a>
+      <div class="container-primary">
+        <div class="container" style="height: 100%;">
+          <ul class="side-nav collection" id="mobile-demo">
+            <li class="collection-item">
+              <img src="assets/img/logo-policia.png" class="responsive-img">
+            </li>
+            <li class="collection-item grey lighten-4 green-text right-align">
+              <i class="fa fa-th" aria-hidden="true" id="home"></i>
+            </li>
+            <li class="collection-item avatar green-text text-darken-3 valign-wrapper">
+              <i class="fa fa-exclamation-circle  icons-custom-nav" aria-hidden="true"></i>            
+              <span class="title">Petición, Quejas, Reclamos y Sugerencias</span>
+              <!--<p></p>-->            
+            </li>
+            <li class="collection-item avatar green-text text-darken-3 valign-wrapper">
+              <i class="material-icons  icons-custom-nav">phonelink_setup</i>
+              <span class="title">APP POLIS</span>            
+            </li>
+            <li class="collection-item avatar green-text text-darken-3 valign-wrapper">
+              <i class="material-icons  icons-custom-nav">supervisor_account</i>
+              <span class="title">Violencia Intrafamiliar</span>            
+            </li>        
+            <li class="collection-item avatar green-text text-darken-3 valign-wrapper">
+              <i class="fa fa-gavel  icons-custom-nav" aria-hidden="true"></i>
+              <span class="title">Antecedentes Judiciales</span>            
+            </li>        
+            <li class="collection-item avatar green-text text-darken-3 valign-wrapper">
+              <i class="material-icons  icons-custom-nav">phonelink_lock</i>
+              <span class="title">Celulares Recuperados</span>            
+            </li>        
+            <li class="collection-item avatar green-text text-darken-3 valign-wrapper">
+              <i class="fa fa-building  icons-custom-nav" aria-hidden="true"></i>
+              <span class="title">Acceso a Información Pública</span>
+            </li>        
+            <li class="collection-item avatar green-text text-darken-3 valign-wrapper">            
+              <i class="fa fa-flask  icons-custom-nav" aria-hidden="true"></i>
+              <span class="title">Control de Sustancias Químicas SICOQ</span>
+            </li>
+            <li class="collection-item avatar green-text text-darken-3 valign-wrapper">          
+              <i class="fa fa-file-text  icons-custom-nav" aria-hidden="true"></i>            
+              <span class="title">Pérdida de Documentos y/o Elementos</span>
+            </li>
+            <li class="collection-item avatar green-text text-darken-3 valign-wrapper">          
+              <i class="fa fa-graduation-cap  icons-custom-nav" aria-hidden="true"></i>            
+              <span class="title">Red de Educadores</span>            
+            </li>          
+            <li class="collection-item avatar green-text text-darken-3 valign-wrapper">          
+              <i class="fa fa-car  icons-custom-nav" aria-hidden="true"></i>
+              <span class="title">Trámites de Vehículos</span>            
+            </li>
+            <li class="collection-item avatar green-text text-darken-3 valign-wrapper">
+              <i class="fa fa-female  icons-custom-nav" aria-hidden="true"></i>
+              <span class="title">Atención a Mujeres</span>            
+            </li>          
+          </ul>
+            <div id="container-options">
+              <div class="row" style="margin-bottom: 0;">
+                <div class="col s12 m5">
+                  <div class="card horizontal  card-custom">
+                    <div class="card-image">
+                      <i class="fa fa-exclamation-circle icons-custom" aria-hidden="true"></i>                  
                     </div>
-                    <div class="carousel-item red white-text" href="#one!">
-                      
-                      <p class="white-text">This is your first panel</p>
+                    <div class="card-stacked">
+                      <div class="card-content text-white valign-wrapper">
+                        <p class="valign">Petición, Quejas, Reclamos y Sugerencias.</p>
+                      </div>
+                      <!--<div class="card-action">
+                        <a href="#">This is a link</a>
+                      </div>-->
                     </div>
-                    <div class="carousel-item amber white-text" href="#two!">
-                      <h2>Second Panel</h2>
-                      <p class="white-text">This is your second panel</p>
-                    </div>
-                  </div>                  
-                </div>
-              </div>
-            </div>
-            <div class="col s6 m3">
-              <div class="card horizontal  card-custom">
-                <div class="card-image">
-                  <i class="fa fa-car icons-custom" aria-hidden="true" style="font-size: 100px;margin-left:5px;margin-top: 30px;"></i>
-                </div>
-                <div class="card-stacked">
-                  <div class="card-content text-white valign-wrapper">
-                    <p class="valign">Petición, Quejas, Reclamos y Sugerencias.</p>
                   </div>
-                  <!--<div class="card-action">
-                    <a href="#">This is a link</a>
-                  </div>-->
+                </div>
+                <div class="col s6 m3 offset-m1">
+                  <div class="card horizontal  card-custom">
+                    <div class="card-image">
+                      <i class="material-icons icons-custom">phonelink_setup</i>        
+                    </div>
+                    <div class="card-stacked">
+                      <div class="card-content text-white valign-wrapper">
+                        <p class="valign">APP POLIS</p>
+                      </div>
+                      <!--<div class="card-action">
+                        <a href="#">This is a link</a>
+                      </div>-->
+                    </div>
+                  </div>
+                </div>
+                <div class="col s6 m2 offset-m1">
+                  <div class="card horizontal  card-custom text-white button-collapse" data-activates="mobile-demo">
+                      <i class="fa fa-arrow-left" id="arrow-menu" aria-hidden="true" style="position:absolute;bottom:15px;left:15px;font-size: 50px;"></i>
+                      <i class="material-icons" style="position: absolute;font-size: 50px;top: 15px;right: 15px;">menu</i>
+                  </div>
                 </div>
               </div>
-            </div>
+              <div class="row" style="margin-bottom: 0;">
+                <div class="col s6 m3">
+                  <div class="card horizontal  card-custom">
+                    <div class="card-image">
+                      <i class="material-icons  icons-custom">supervisor_account</i>               
+                    </div>
+                    <div class="card-stacked">
+                      <div class="card-content text-white valign-wrapper">
+                        <p class="valign">Violencia Intrafamiliar</p>
+                      </div>
+                      <!--<div class="card-action">
+                        <a href="#">This is a link</a>
+                      </div>-->
+                    </div>
+                  </div>
+                </div>
+                <div class="col s6 m3">
+                  <div class="card horizontal  card-custom">
+                    <div class="card-image">
+                      <i class="fa fa-gavel  icons-custom" aria-hidden="true"></i>
+                    </div>
+                    <div class="card-stacked">
+                      <div class="card-content text-white valign-wrapper">
+                        <p class="valign">Antecedentes Judiciales</p>
+                      </div>
+                      <!--<div class="card-action">
+                        <a href="#">This is a link</a>
+                      </div>-->
+                    </div>
+                  </div>
+                </div>
+                <div class="col s6 m3">
+                  <div class="card horizontal  card-custom">
+                    <div class="card-image">
+                      <i class="material-icons  icons-custom">phonelink_lock</i>
+                    </div>
+                    <div class="card-stacked">
+                      <div class="card-content text-white valign-wrapper">
+                        <p class="valign">Celulares Recuperados</p>
+                      </div>
+                      <!--<div class="card-action">
+                        <a href="#">This is a link</a>
+                      </div>-->
+                    </div>
+                  </div>
+                </div>
+                <div class="col s6 m3">
+                  <div class="card horizontal  card-custom">
+                    <div class="card-image">
+                      <i class="fa fa-building  icons-custom" aria-hidden="true"></i>
+                    </div>
+                    <div class="card-stacked">
+                      <div class="card-content text-white valign-wrapper">
+                        <p class="valign">Acceso a Información Pública</p>
+                      </div>
+                      <!--<div class="card-action">
+                        <a href="#">This is a link</a>
+                      </div>-->
+                    </div>
+                  </div>
+                </div>
 
-          </div>
-          </div>
-      </div>      
-      <footer class="page-footer white z-depth-1">
+              </div>
+              <div class="row" style="margin-bottom: 0;">
+                <div class="col s6 m3">
+                  <div class="card horizontal  card-custom">
+                    <div class="card-image">
+                      <i class="fa fa-flask icons-custom" aria-hidden="true"></i>                  
+                    </div>
+                    <div class="card-stacked">
+                      <div class="card-content text-white valign-wrapper">
+                        <p class="valign">Petición, Quejas, Reclamos y Sugerencias.</p>
+                      </div>
+                      <!--<div class="card-action">
+                        <a href="#">This is a link</a>
+                      </div>-->
+                    </div>
+                  </div>
+                </div>
+                <div class="col s6 m3">
+                  <div class="card horizontal  card-custom">
+                    <div class="card-image">
+                      <i class="fa fa-file-text icons-custom" aria-hidden="true"></i>
+                    </div>
+                    <div class="card-stacked">
+                      <div class="card-content text-white valign-wrapper">
+                        <p class="valign">Petición, Quejas, Reclamos y Sugerencias.</p>
+                      </div>
+                      <!--<div class="card-action">
+                        <a href="#">This is a link</a>
+                      </div>-->
+                    </div>
+                  </div>
+                </div>
+                <div class="col s6 m3">
+                  <div class="card horizontal  card-custom">
+                    <div class="card-image">
+                      <i class="fa fa-graduation-cap icons-custom" aria-hidden="true"></i>
+                    </div>
+                    <div class="card-stacked">
+                      <div class="card-content text-white valign-wrapper">
+                        <p class="valign">Petición, Quejas, Reclamos y Sugerencias.</p>
+                      </div>
+                      <!--<div class="card-action">
+                        <a href="#">This is a link</a>
+                      </div>-->
+                    </div>
+                  </div>
+                </div>
+                <div class="col s6 m3">
+                  <div class="card horizontal  card-custom">
+                    <div class="card-image">
+                      <i class="fa fa-car icons-custom" aria-hidden="true" style="font-size: 100px;margin-left:5px;margin-top: 30px;"></i>
+                    </div>
+                    <div class="card-stacked">
+                      <div class="card-content text-white valign-wrapper">
+                        <p class="valign">Petición, Quejas, Reclamos y Sugerencias.</p>
+                      </div>
+                      <!--<div class="card-action">
+                        <a href="#">This is a link</a>
+                      </div>-->
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="col s6 m3">
+                  <div class="card horizontal  card-custom">
+                    <div class="card-image">
+                      <i class="fa fa-female icons-custom" aria-hidden="true"></i>             
+                    </div>
+                    <div class="card-stacked">
+                      <div class="card-content text-white valign-wrapper">
+                        <p class="valign">Atención a Mujeres</p>
+                      </div>
+                      <!--<div class="card-action">
+                        <a href="#">This is a link</a>
+                      </div>-->
+                    </div>
+                  </div>
+                </div>
+                <div class="col s6 m2">
+                  <div class="card horizontal  card-custom">
+                    <div class="card-image">
+                      <i class="fa fa-paw icons-custom" aria-hidden="true"></i>
+                    </div>
+                    <div class="card-stacked">
+                      <div class="card-content text-white valign-wrapper">
+                        <p class="valign">Maltrato Animal.</p>
+                      </div>
+                      <!--<div class="card-action">
+                        <a href="#">This is a link</a>
+                      </div>-->
+                    </div>
+                  </div>
+                </div>
+                <div class="col s6 m4">              
+
+                  <div class="card horizontal card-custom" style="background-color: #fff !important;">
+                    <div class="card-stacked">
+                      <div class="carousel carousel-slider center" data-indicators="true">
+                        <div class="carousel-fixed-item center">                      
+                          <a class="btn waves-effect white grey-text darken-text-2">button</a>
+                        </div>
+                        <div class="carousel-item red white-text" href="#one!">
+                          
+                          <p class="white-text">This is your first panel</p>
+                        </div>
+                        <div class="carousel-item amber white-text" href="#two!">
+                          <h2>Second Panel</h2>
+                          <p class="white-text">This is your second panel</p>
+                        </div>
+                      </div>                  
+                    </div>
+                  </div>
+                </div>
+                <div class="col s6 m3">
+                  <div class="card horizontal  card-custom">
+                    <div class="card-image">
+                      <i class="fa fa-car icons-custom" aria-hidden="true" style="font-size: 100px;margin-left:5px;margin-top: 30px;"></i>
+                    </div>
+                    <div class="card-stacked">
+                      <div class="card-content text-white valign-wrapper">
+                        <p class="valign">Petición, Quejas, Reclamos y Sugerencias.</p>
+                      </div>
+                      <!--<div class="card-action">
+                        <a href="#">This is a link</a>
+                      </div>-->
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div id="container-info" style="display:none;opacity: 0;height: 100%;">
+              <iframe src="http://excinober.com/" frameborder="0" allowfullscreen class="iframe-info"></iframe>
+            </div>
+        </div>  
+      </div>    
+      <!--<footer class="page-footer white z-depth-1">-->
+      <footer>
           <div class="container">
             <div class="row">
               <div class="footer-block footer-block-titulo">
@@ -379,10 +397,7 @@
               <div class="footer-block footer-block-boton">
                 <a class="waves-effect waves-light btn-large" style="font-size: 12px;padding: 0 1rem;">Información Legal</a>
               </div>
-            </div>
-            <div class="row">
-              <div class="col s12" style="background-color: #009688;height: 10px;"></div>
-            </div>
+            </div>            
           </div>
           <!--<div class="footer-copyright">
             <div class="container">
@@ -401,18 +416,17 @@
           
           setInterval(function(){ 
             $("#arrow-menu").addClass("animated bounceInRight");
-          }, 4000);
+          }, 3000);
             
           setTimeout(function(){
              setInterval(function(){
               $("#arrow-menu").removeClass("animated bounceInRight");
-             },4000);            
-          }, 6000);
+             },3000);            
+          }, 4000);
 
           $(".button-collapse").sideNav({
             menuWidth: 300,
             edge: 'left'
-
           }, 'show');
           
 
@@ -421,11 +435,56 @@
           //$('.button-collapse').sideNav('show');
 
           $(".button-collapse").click(function(){
-            $("#ocultar").addClass("animated zoomOutLeft");
+              hideOptions();              
+              setTimeout(function(){
+
+                $("#sidenav-overlay, .drag-target").remove();
+
+                showInfo(); 
+              },1500);              
           });
+
+          $("#home").click(function(){
+            $('.button-collapse').sideNav({}, 'hide');
+            hideInfo();
+            showOptions();
+          });          
           
 
         })
+
+        function hideOptions(){
+          $("#container-options").addClass("animated zoomOutLeft");
+
+          setTimeout(function(){
+            $("#container-options").css("display","none");
+          },1000);
+        }
+
+        function showOptions(){
+          
+          $("#container-options").removeClass();
+          $("#container-options").css("opacity","0");
+          $("#container-options").css("display","block");
+          
+          setTimeout(function(){
+            $("#container-options").addClass("animated fadeIn");
+          },1000);
+          
+        }
+
+        function showInfo(){
+          $("#container-info").removeClass();
+          $("#container-info").css("display","block");
+          $("#container-info").addClass("animated bounceIn"); 
+        }
+
+        function hideInfo(){          
+          $("#container-info").addClass("animated zoomOutLeft");  
+          setTimeout(function(){
+            $("#container-info").css("display","none");
+          },1000);          
+        }
       </script>
     </body>
   </html>
