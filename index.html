@@ -7,12 +7,14 @@
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
       <!--Import Font Awesome-->
-      <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="assets/css/materialize.css"  media="screen,projection"/>
 
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="assets/css/font-awesome.min.css"  media="screen,projection"/>
 
       <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+      <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -67,9 +69,9 @@
             <span class="title">Atención a Mujeres</span>            
           </li>          
         </ul>
-
+          <div id="ocultar">
           <div class="row" style="margin-bottom: 0;">
-            <div class="col s5">
+            <div class="col s12 m5">
               <div class="card horizontal  card-custom">
                 <div class="card-image">
                   <i class="fa fa-exclamation-circle icons-custom" aria-hidden="true"></i>                  
@@ -84,7 +86,7 @@
                 </div>
               </div>
             </div>
-            <div class="col s3 offset-s1">
+            <div class="col s6 m3 offset-m1">
               <div class="card horizontal  card-custom">
                 <div class="card-image">
                   <i class="material-icons icons-custom">phonelink_setup</i>        
@@ -99,15 +101,15 @@
                 </div>
               </div>
             </div>
-            <div class="col s2 offset-s1">
+            <div class="col s6 m2 offset-m1">
               <div class="card horizontal  card-custom text-white button-collapse" data-activates="mobile-demo">
-                  <i class="fa fa-arrow-left" aria-hidden="true" style="position:absolute;bottom:15px;left:15px;font-size: 50px;"></i>
+                  <i class="fa fa-arrow-left" id="arrow-menu" aria-hidden="true" style="position:absolute;bottom:15px;left:15px;font-size: 50px;"></i>
                   <i class="material-icons" style="position: absolute;font-size: 50px;top: 15px;right: 15px;">menu</i>
               </div>
             </div>
           </div>
           <div class="row" style="margin-bottom: 0;">
-            <div class="col s3">
+            <div class="col s6 m3">
               <div class="card horizontal  card-custom">
                 <div class="card-image">
                   <i class="material-icons  icons-custom">supervisor_account</i>               
@@ -122,7 +124,7 @@
                 </div>
               </div>
             </div>
-            <div class="col s3">
+            <div class="col s6 m3">
               <div class="card horizontal  card-custom">
                 <div class="card-image">
                   <i class="fa fa-gavel  icons-custom" aria-hidden="true"></i>
@@ -137,7 +139,7 @@
                 </div>
               </div>
             </div>
-            <div class="col s3">
+            <div class="col s6 m3">
               <div class="card horizontal  card-custom">
                 <div class="card-image">
                   <i class="material-icons  icons-custom">phonelink_lock</i>
@@ -152,7 +154,7 @@
                 </div>
               </div>
             </div>
-            <div class="col s3">
+            <div class="col s6 m3">
               <div class="card horizontal  card-custom">
                 <div class="card-image">
                   <i class="fa fa-building  icons-custom" aria-hidden="true"></i>
@@ -170,7 +172,7 @@
 
           </div>
           <div class="row" style="margin-bottom: 0;">
-            <div class="col s3">
+            <div class="col s6 m3">
               <div class="card horizontal  card-custom">
                 <div class="card-image">
                   <i class="fa fa-flask icons-custom" aria-hidden="true"></i>                  
@@ -185,7 +187,7 @@
                 </div>
               </div>
             </div>
-            <div class="col s3">
+            <div class="col s6 m3">
               <div class="card horizontal  card-custom">
                 <div class="card-image">
                   <i class="fa fa-file-text icons-custom" aria-hidden="true"></i>
@@ -200,7 +202,7 @@
                 </div>
               </div>
             </div>
-            <div class="col s3">
+            <div class="col s6 m3">
               <div class="card horizontal  card-custom">
                 <div class="card-image">
                   <i class="fa fa-graduation-cap icons-custom" aria-hidden="true"></i>
@@ -215,7 +217,7 @@
                 </div>
               </div>
             </div>
-            <div class="col s3">
+            <div class="col s6 m3">
               <div class="card horizontal  card-custom">
                 <div class="card-image">
                   <i class="fa fa-car icons-custom" aria-hidden="true" style="font-size: 100px;margin-left:5px;margin-top: 30px;"></i>
@@ -233,7 +235,7 @@
 
           </div>
           <div class="row">
-            <div class="col s3">
+            <div class="col s6 m3">
               <div class="card horizontal  card-custom">
                 <div class="card-image">
                   <i class="fa fa-female icons-custom" aria-hidden="true"></i>             
@@ -248,7 +250,7 @@
                 </div>
               </div>
             </div>
-            <div class="col s2">
+            <div class="col s6 m2">
               <div class="card horizontal  card-custom">
                 <div class="card-image">
                   <i class="fa fa-paw icons-custom" aria-hidden="true"></i>
@@ -263,14 +265,27 @@
                 </div>
               </div>
             </div>
-            <div class="col s4">
+            <div class="col s6 m4">              
+
               <div class="card horizontal card-custom" style="background-color: #fff !important;">
-                <div class="card-stacked" style="padding: 30px;">
-                  <img src="assets/img/logo-policia.png" class="responsive-img">
+                <div class="card-stacked">
+                  <div class="carousel carousel-slider center" data-indicators="true">
+                    <div class="carousel-fixed-item center">                      
+                      <a class="btn waves-effect white grey-text darken-text-2">button</a>
+                    </div>
+                    <div class="carousel-item red white-text" href="#one!">
+                      
+                      <p class="white-text">This is your first panel</p>
+                    </div>
+                    <div class="carousel-item amber white-text" href="#two!">
+                      <h2>Second Panel</h2>
+                      <p class="white-text">This is your second panel</p>
+                    </div>
+                  </div>                  
                 </div>
               </div>
             </div>
-            <div class="col s3">
+            <div class="col s6 m3">
               <div class="card horizontal  card-custom">
                 <div class="card-image">
                   <i class="fa fa-car icons-custom" aria-hidden="true" style="font-size: 100px;margin-left:5px;margin-top: 30px;"></i>
@@ -287,11 +302,12 @@
             </div>
 
           </div>
+          </div>
       </div>      
       <footer class="page-footer white z-depth-1">
           <div class="container">
             <div class="row">
-              <div class="footer-block" style="width: 10%;">
+              <div class="footer-block footer-block-titulo">
                 <h5 style="font-weight: normal;font-size: 1.4rem;">Líneas de Emergencia</h5>
               </div>
               <div class="footer-block">
@@ -349,7 +365,7 @@
                   <p>Seguridad Víal</p>
                 </div>
               </div>
-              <div class="footer-block" style="width: 15%;">
+              <div class="footer-block">
                 <div class="left" style="width: 30%;">
                   <div class="purple lighten-1 circle icons-custom-footer center-align">
                     <i class="fa fa-user-secret" aria-hidden="true"></i>
@@ -360,7 +376,7 @@
                   <p>Antiterrorismo</p>
                 </div>
               </div>
-              <div class="footer-block">
+              <div class="footer-block footer-block-boton">
                 <a class="waves-effect waves-light btn-large" style="font-size: 12px;padding: 0 1rem;">Información Legal</a>
               </div>
             </div>
@@ -383,14 +399,32 @@
         
         $(document).ready(function(){     
           
+          setInterval(function(){ 
+            $("#arrow-menu").addClass("animated bounceInRight");
+          }, 4000);
+            
+          setTimeout(function(){
+             setInterval(function(){
+              $("#arrow-menu").removeClass("animated bounceInRight");
+             },4000);            
+          }, 6000);
+
           $(".button-collapse").sideNav({
             menuWidth: 300,
             edge: 'left'
 
           }, 'show');
           
-          $('.button-collapse').sideNav('show');
+
+          $('.carousel.carousel-slider').carousel({full_width: true});
+        
+          //$('.button-collapse').sideNav('show');
+
+          $(".button-collapse").click(function(){
+            $("#ocultar").addClass("animated zoomOutLeft");
+          });
           
+
         })
       </script>
     </body>
