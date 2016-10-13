@@ -2,6 +2,7 @@
   <html>
     <head>
       <meta charset="utf-8">
+      <base href="<?=URL_SITIO?>">
 
       <!--Import Google Icon Font-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -26,7 +27,7 @@
       </style>
     </head>
 
-    <body>
+    <body>    
       <div class="container-primary">
         <div class="container" style="height: 100%;">
           <ul class="side-nav collection" id="mobile-demo">
@@ -36,66 +37,133 @@
             <li class="collection-item grey lighten-4 green-text right-align">
               <i class="fa fa-th" aria-hidden="true" id="home"></i>
             </li>
-            <li class="collection-item avatar green-text text-darken-3 valign-wrapper">
-              <i class="fa fa-exclamation-circle  icons-custom-nav" aria-hidden="true"></i>            
-              <span class="title">Petición, Quejas, Reclamos y Sugerencias</span>
-              <!--<p></p>-->            
-            </li>
-            <li class="collection-item avatar green-text text-darken-3 valign-wrapper">
-              <i class="material-icons  icons-custom-nav">phonelink_setup</i>
-              <span class="title">APP POLIS</span>            
-            </li>
-            <li class="collection-item avatar green-text text-darken-3 valign-wrapper">
-              <i class="material-icons  icons-custom-nav">supervisor_account</i>
-              <span class="title">Violencia Intrafamiliar</span>            
-            </li>        
-            <li class="collection-item avatar green-text text-darken-3 valign-wrapper">
-              <i class="fa fa-gavel  icons-custom-nav" aria-hidden="true"></i>
-              <span class="title">Antecedentes Judiciales</span>            
-            </li>        
-            <li class="collection-item avatar green-text text-darken-3 valign-wrapper">
-              <i class="material-icons  icons-custom-nav">phonelink_lock</i>
-              <span class="title">Celulares Recuperados</span>            
-            </li>        
-            <li class="collection-item avatar green-text text-darken-3 valign-wrapper">
-              <i class="fa fa-building  icons-custom-nav" aria-hidden="true"></i>
-              <span class="title">Acceso a Información Pública</span>
-            </li>        
-            <li class="collection-item avatar green-text text-darken-3 valign-wrapper">            
-              <i class="fa fa-flask  icons-custom-nav" aria-hidden="true"></i>
-              <span class="title">Control de Sustancias Químicas SICOQ</span>
-            </li>
-            <li class="collection-item avatar green-text text-darken-3 valign-wrapper">          
-              <i class="fa fa-file-text  icons-custom-nav" aria-hidden="true"></i>            
-              <span class="title">Pérdida de Documentos y/o Elementos</span>
-            </li>
-            <li class="collection-item avatar green-text text-darken-3 valign-wrapper">          
-              <i class="fa fa-graduation-cap  icons-custom-nav" aria-hidden="true"></i>            
-              <span class="title">Red de Educadores</span>            
-            </li>          
-            <li class="collection-item avatar green-text text-darken-3 valign-wrapper">          
-              <i class="fa fa-car  icons-custom-nav" aria-hidden="true"></i>
-              <span class="title">Trámites de Vehículos</span>            
-            </li>
-            <li class="collection-item avatar green-text text-darken-3 valign-wrapper">
-              <i class="fa fa-female  icons-custom-nav" aria-hidden="true"></i>
-              <span class="title">Atención a Mujeres</span>            
-            </li>          
+            <?php 
+              foreach ($opciones as $key => $opcion) {
+            ?>
+              <li class="collection-item avatar green-text text-darken-3 valign-wrapper option-navbar" href="<?=$opcion["url"]?>">
+                <?=$opcion["icono"]?>
+                <span class="title"><?=$opcion["nombre"]?></span>
+                <!--<p></p>-->
+              </li>  
+            <?php
+              }
+            ?>
           </ul>
             <div id="container-options">
               <div class="row" style="margin-bottom: 0;">
+              <?php
+
+                $count = 0;
+
+                foreach ($row1 as $key => $block) {
+                  $icono = str_replace("icons-custom-nav","icons-custom",$opciones[$count]["icono"]);
+              ?>  
+                <div class="<?=$block?>">
+                  <div class="card horizontal card-custom option-menu" href="<?=$opciones[$count]["url"]?>">
+                    <div class="card-image">
+                      <?=$icono?>
+                    </div>
+                    <div class="card-stacked">
+                      <div class="card-content text-white valign-wrapper">
+                        <p class="valign"><?=$opciones[$count]["nombre"]?></p>
+                      </div>                      
+                    </div>
+                  </div>
+                </div>
+              <?php
+                $count++;
+                }
+              ?>
+                <div class="col s6 m2 offset-m1">
+                  <div class="card horizontal  card-custom text-white button-collapse" data-activates="mobile-demo">
+                      <i class="fa fa-arrow-left" id="arrow-menu" aria-hidden="true" style="position:absolute;bottom:15px;left:15px;font-size: 50px;"></i>
+                      <i class="material-icons" style="position: absolute;font-size: 50px;top: 15px;right: 15px;">menu</i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row" style="margin-bottom: 0;">
+              <?php                
+
+                foreach ($row2 as $key => $block) {
+                  $icono = str_replace("icons-custom-nav","icons-custom",$opciones[$count]["icono"]);
+              ?>  
+                <div class="<?=$block?>">
+                  <div class="card horizontal  card-custom option-menu" href="<?=$opciones[$count]["url"]?>">
+                    <div class="card-image">
+                      <?=$icono?>
+                    </div>
+                    <div class="card-stacked">
+                      <div class="card-content text-white valign-wrapper">
+                        <p class="valign"><?=$opciones[$count]["nombre"]?></p>
+                      </div>                      
+                    </div>
+                  </div>
+                </div>
+              <?php
+                $count++;
+                }
+              ?>
+              </div>
+
+              <div class="row" style="margin-bottom: 0;">
+              <?php
+
+                foreach ($row3 as $key => $block) {
+                  $icono = str_replace("icons-custom-nav","icons-custom",$opciones[$count]["icono"]);
+              ?>  
+                <div class="<?=$block?>">
+                  <div class="card horizontal  card-custom option-menu" href="<?=$opciones[$count]["url"]?>">
+                    <div class="card-image">
+                      <?=$icono?>
+                    </div>
+                    <div class="card-stacked">
+                      <div class="card-content text-white valign-wrapper">
+                        <p class="valign"><?=$opciones[$count]["nombre"]?></p>
+                      </div>                      
+                    </div>
+                  </div>
+                </div>
+              <?php
+                $count++;
+                }
+              ?>
+              </div>
+              <div class="row" style="margin-bottom: 0;">
+              <?php
+
+                foreach ($row4 as $key => $block) {
+                  $icono = str_replace("icons-custom-nav","icons-custom",$opciones[$count]["icono"]);
+              ?>  
+                <div class="<?=$block?>">
+                  <div class="card horizontal  card-custom option-menu" href="<?=$opciones[$count]["url"]?>">
+                    <div class="card-image">
+                      <?=$icono?>
+                    </div>
+                    <div class="card-stacked">
+                      <div class="card-content text-white valign-wrapper">
+                        <p class="valign"><?=$opciones[$count]["nombre"]?></p>
+                      </div>                      
+                    </div>
+                  </div>
+                </div>
+              <?php
+                $count++;
+                }
+              ?>
+              </div>
+              
+              <!--<div class="row" style="margin-bottom: 0;">
+                
                 <div class="col s12 m5">
                   <div class="card horizontal  card-custom">
                     <div class="card-image">
-                      <i class="fa fa-exclamation-circle icons-custom" aria-hidden="true"></i>                  
+                      <i class="fa fa-exclamation-circle icons-custom" aria-hidden="true"></i>
                     </div>
                     <div class="card-stacked">
                       <div class="card-content text-white valign-wrapper">
                         <p class="valign">Petición, Quejas, Reclamos y Sugerencias.</p>
-                      </div>
-                      <!--<div class="card-action">
-                        <a href="#">This is a link</a>
-                      </div>-->
+                      </div>                      
                     </div>
                   </div>
                 </div>
@@ -107,10 +175,7 @@
                     <div class="card-stacked">
                       <div class="card-content text-white valign-wrapper">
                         <p class="valign">APP POLIS</p>
-                      </div>
-                      <!--<div class="card-action">
-                        <a href="#">This is a link</a>
-                      </div>-->
+                      </div>                      
                     </div>
                   </div>
                 </div>
@@ -120,7 +185,8 @@
                       <i class="material-icons" style="position: absolute;font-size: 50px;top: 15px;right: 15px;">menu</i>
                   </div>
                 </div>
-              </div>
+              </div>-->
+              <!---
               <div class="row" style="margin-bottom: 0;">
                 <div class="col s6 m3">
                   <div class="card horizontal  card-custom">
@@ -130,10 +196,7 @@
                     <div class="card-stacked">
                       <div class="card-content text-white valign-wrapper">
                         <p class="valign">Violencia Intrafamiliar</p>
-                      </div>
-                      <!--<div class="card-action">
-                        <a href="#">This is a link</a>
-                      </div>-->
+                      </div>                      
                     </div>
                   </div>
                 </div>
@@ -145,10 +208,7 @@
                     <div class="card-stacked">
                       <div class="card-content text-white valign-wrapper">
                         <p class="valign">Antecedentes Judiciales</p>
-                      </div>
-                      <!--<div class="card-action">
-                        <a href="#">This is a link</a>
-                      </div>-->
+                      </div>                      
                     </div>
                   </div>
                 </div>
@@ -160,10 +220,7 @@
                     <div class="card-stacked">
                       <div class="card-content text-white valign-wrapper">
                         <p class="valign">Celulares Recuperados</p>
-                      </div>
-                      <!--<div class="card-action">
-                        <a href="#">This is a link</a>
-                      </div>-->
+                      </div>                      
                     </div>
                   </div>
                 </div>
@@ -175,15 +232,13 @@
                     <div class="card-stacked">
                       <div class="card-content text-white valign-wrapper">
                         <p class="valign">Acceso a Información Pública</p>
-                      </div>
-                      <!--<div class="card-action">
-                        <a href="#">This is a link</a>
-                      </div>-->
+                      </div>                      
                     </div>
                   </div>
                 </div>
 
-              </div>
+              </div>-->
+              <!--
               <div class="row" style="margin-bottom: 0;">
                 <div class="col s6 m3">
                   <div class="card horizontal  card-custom">
@@ -193,10 +248,7 @@
                     <div class="card-stacked">
                       <div class="card-content text-white valign-wrapper">
                         <p class="valign">Petición, Quejas, Reclamos y Sugerencias.</p>
-                      </div>
-                      <!--<div class="card-action">
-                        <a href="#">This is a link</a>
-                      </div>-->
+                      </div>                      
                     </div>
                   </div>
                 </div>
@@ -208,10 +260,7 @@
                     <div class="card-stacked">
                       <div class="card-content text-white valign-wrapper">
                         <p class="valign">Petición, Quejas, Reclamos y Sugerencias.</p>
-                      </div>
-                      <!--<div class="card-action">
-                        <a href="#">This is a link</a>
-                      </div>-->
+                      </div>                      
                     </div>
                   </div>
                 </div>
@@ -223,10 +272,7 @@
                     <div class="card-stacked">
                       <div class="card-content text-white valign-wrapper">
                         <p class="valign">Petición, Quejas, Reclamos y Sugerencias.</p>
-                      </div>
-                      <!--<div class="card-action">
-                        <a href="#">This is a link</a>
-                      </div>-->
+                      </div>                      
                     </div>
                   </div>
                 </div>
@@ -238,15 +284,13 @@
                     <div class="card-stacked">
                       <div class="card-content text-white valign-wrapper">
                         <p class="valign">Petición, Quejas, Reclamos y Sugerencias.</p>
-                      </div>
-                      <!--<div class="card-action">
-                        <a href="#">This is a link</a>
-                      </div>-->
+                      </div>                      
                     </div>
                   </div>
                 </div>
 
-              </div>
+              </div>-->
+              <!--
               <div class="row">
                 <div class="col s6 m3">
                   <div class="card horizontal  card-custom">
@@ -256,10 +300,7 @@
                     <div class="card-stacked">
                       <div class="card-content text-white valign-wrapper">
                         <p class="valign">Atención a Mujeres</p>
-                      </div>
-                      <!--<div class="card-action">
-                        <a href="#">This is a link</a>
-                      </div>-->
+                      </div>                      
                     </div>
                   </div>
                 </div>
@@ -271,10 +312,7 @@
                     <div class="card-stacked">
                       <div class="card-content text-white valign-wrapper">
                         <p class="valign">Maltrato Animal.</p>
-                      </div>
-                      <!--<div class="card-action">
-                        <a href="#">This is a link</a>
-                      </div>-->
+                      </div>                      
                     </div>
                   </div>
                 </div>
@@ -306,18 +344,15 @@
                     <div class="card-stacked">
                       <div class="card-content text-white valign-wrapper">
                         <p class="valign">Petición, Quejas, Reclamos y Sugerencias.</p>
-                      </div>
-                      <!--<div class="card-action">
-                        <a href="#">This is a link</a>
-                      </div>-->
+                      </div>                      
                     </div>
                   </div>
                 </div>
 
-              </div>
+              </div>-->
             </div>
             <div id="container-info" style="display:none;opacity: 0;height: 100%;">
-              <iframe src="http://excinober.com/" frameborder="0" allowfullscreen class="iframe-info"></iframe>
+              <iframe src="http://www.policia.gov.co/portal/page/portal/CONTACTENOS/Escribale_al_director" frameborder="0" allowfullscreen class="iframe-info"></iframe>
             </div>
         </div>  
       </div>    
@@ -395,7 +430,7 @@
                 </div>
               </div>
               <div class="footer-block footer-block-boton">
-                <a class="waves-effect waves-light btn-large" style="font-size: 12px;padding: 0 1rem;">Información Legal</a>
+                <a class="waves-effect waves-light btn-large modal-trigger" href="#modal1" style="font-size: 12px;padding: 0 1rem;">Información Legal</a>
               </div>
             </div>            
           </div>
@@ -406,6 +441,22 @@
             </div>
           </div>-->
         </footer>
+
+      <!-- Modal Structure -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4>Lorem Ipsum</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis tortor scelerisque, gravida ipsum quis, lobortis purus. Vestibulum sollicitudin turpis sed magna pulvinar viverra. Proin id ante felis. Fusce posuere odio vel lorem tempor facilisis. Nunc sodales, arcu id scelerisque blandit, lacus risus tristique lorem, eget consectetur augue tellus vel mauris. Etiam sit amet dapibus leo. In ac velit vel sapien sagittis laoreet nec et risus. Praesent eu mi libero. Ut posuere viverra faucibus. Vestibulum condimentum, odio sit amet tincidunt varius, nisl turpis eleifend felis, non pharetra lorem libero id arcu. Vivamus scelerisque sem nec rutrum gravida. Proin ultrices, ante sit amet tempor vehicula, lectus tellus consequat sapien, id semper metus turpis ut odio. Donec tempus facilisis justo ut vulputate. Integer sit amet scelerisque augue.
+
+Aliquam erat volutpat. Aliquam varius porta aliquet. Morbi imperdiet sapien eu nisi venenatis, vitae pharetra neque pretium. Integer eu semper est. Vestibulum aliquet, dolor pharetra luctus accumsan, tortor nunc varius tellus, sed venenatis felis neque vel nisi. Aenean fermentum orci nec massa hendrerit, ut pretium mi placerat. Maecenas ultrices libero eu purus aliquet, eu sodales tellus vestibulum. Quisque justo turpis, fermentum eget porta at, pulvinar at erat. Nulla et tellus non enim congue consequat. Suspendisse eros nisl, aliquam ut tincidunt eu, tristique tincidunt purus. Aenean blandit lacus non lorem porttitor cursus. Sed non ante a ligula venenatis dignissim.
+
+Nulla ut dolor accumsan, placerat arcu at, molestie mi. Ut non dui gravida, dignissim velit eget, vestibulum risus. Vestibulum ut justo sed enim porttitor ultrices at ut nulla. Donec consequat leo magna, ut ultrices sem hendrerit quis. Phasellus ac laoreet justo. Sed in elit porttitor, sagittis diam eget, tristique arcu. Aenean dolor mauris, dictum nec turpis sit amet, venenatis convallis erat. Sed at velit libero. Nam consequat faucibus mi, sit amet porta ex vehicula eget. Curabitur fringilla dui in arcu ullamcorper venenatis. Nulla sit amet sagittis dui, et tempus ipsum. Praesent nec massa tincidunt, vehicula lectus nec, ultricies diam.</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+      </div>
+              
 
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -429,7 +480,8 @@
             edge: 'left'
           }, 'show');
           
-
+          $('.modal-trigger').leanModal();
+          
           $('.carousel.carousel-slider').carousel({full_width: true});
         
           //$('.button-collapse').sideNav('show');
@@ -448,10 +500,24 @@
             $('.button-collapse').sideNav({}, 'hide');
             hideInfo();
             showOptions();
-          });          
+          });
+
+          $(".option-navbar").click(function(){
+            var url = $(this).attr("href");
+            $(".iframe-info").attr("src", url);            
+          });
+
+          $(".option-menu").click(function(){
+            var url = $(this).attr("href");
+            $(".iframe-info").attr("src", url);
+
+            hideOptions();
+            showInfo();
+            $('.button-collapse').sideNav('show');
+          });
           
 
-        })
+        });
 
         function hideOptions(){
           $("#container-options").addClass("animated zoomOutLeft");
