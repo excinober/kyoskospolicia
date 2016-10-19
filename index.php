@@ -47,6 +47,13 @@ if (isset($_GET["url"]) && !empty($_GET["url"])) {
 					$controller->pageAdminHome();							
 				}
 				break;
+
+			case 'redirect':
+				if (isset($_GET["frame"])) {
+					$controller = new Controller();
+					$controller->redirect($_GET["frame"]);	
+				}				
+				break;
 			
 			default:
 				$controller = new Controller();

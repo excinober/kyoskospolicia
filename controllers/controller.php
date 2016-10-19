@@ -38,5 +38,25 @@ class Controller
 
 		include "views/home.php";
 	}
+
+	public function redirect($frame){
+		//header("Location: ".$frame);
+		/*if (isset($frame)) {
+		    $frame = $frame;
+		    $ch = curl_init();
+		    $timeout = 5;
+		    curl_setopt($ch, CURLOPT_URL, $frame);
+		    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+		    $data = curl_exec($ch);
+		    curl_close($ch);
+		    echo $data;
+		}*/
+
+		$homepage = file_get_contents($frame);
+		echo $homepage;
+		//echo $frame;
+
+	}
 }
 ?>
