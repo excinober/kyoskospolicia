@@ -357,7 +357,7 @@
         </div>  
       </div>    
       <!--<footer class="page-footer white z-depth-1">-->
-      <footer>
+      <footer class="z-depth-1 white">
           <div class="container">
             <div class="row">
               <div class="footer-block footer-block-titulo">
