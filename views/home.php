@@ -27,15 +27,22 @@
       </style>
     </head>
 
-    <body>    
+    <body>
+      <div id="showNav" class="green darken-2 white-text" style="z-index:999;font-size:2rem;position: absolute;top: 20%;height: auto;padding: 10px;display: none;">
+        <i class="fa fa-bars" aria-hidden="true"></i><br>
+        <i class="fa fa-eye" aria-hidden="true"></i>      
+      </div>
+
       <div class="container-primary">
         <div class="container" style="height: 100%;">
+          
           <ul class="side-nav collection" id="mobile-demo">
             <li class="collection-item">
               <img src="assets/img/logo-policia.png" class="responsive-img">
             </li>
-            <li class="collection-item grey lighten-4 green-text right-align">
-              <i class="fa fa-th" aria-hidden="true" id="home"></i>
+            <li class="collection-item grey lighten-4 green-text text-darken-2" style="height: 50px;font-size: 2rem;">
+              <i id="hideNav" class="fa fa-eye-slash left" aria-hidden="true"></i>
+              <i class="fa fa-th right" aria-hidden="true" id="home"></i>
             </li>
             <?php 
               foreach ($opciones as $key => $opcion) {
@@ -151,217 +158,18 @@
                 $count++;
                 }
               ?>
-              </div>
-              
-              <!--<div class="row" style="margin-bottom: 0;">
-                
-                <div class="col s12 m5">
-                  <div class="card horizontal  card-custom">
-                    <div class="card-image">
-                      <i class="fa fa-exclamation-circle icons-custom" aria-hidden="true"></i>
-                    </div>
-                    <div class="card-stacked">
-                      <div class="card-content text-white valign-wrapper">
-                        <p class="valign">Petición, Quejas, Reclamos y Sugerencias.</p>
-                      </div>                      
-                    </div>
-                  </div>
-                </div>
-                <div class="col s6 m3 offset-m1">
-                  <div class="card horizontal  card-custom">
-                    <div class="card-image">
-                      <i class="material-icons icons-custom">phonelink_setup</i>        
-                    </div>
-                    <div class="card-stacked">
-                      <div class="card-content text-white valign-wrapper">
-                        <p class="valign">APP POLIS</p>
-                      </div>                      
-                    </div>
-                  </div>
-                </div>
-                <div class="col s6 m2 offset-m1">
-                  <div class="card horizontal  card-custom text-white button-collapse" data-activates="mobile-demo">
-                      <i class="fa fa-arrow-left" id="arrow-menu" aria-hidden="true" style="position:absolute;bottom:15px;left:15px;font-size: 50px;"></i>
-                      <i class="material-icons" style="position: absolute;font-size: 50px;top: 15px;right: 15px;">menu</i>
-                  </div>
-                </div>
-              </div>-->
-              <!---
-              <div class="row" style="margin-bottom: 0;">
-                <div class="col s6 m3">
-                  <div class="card horizontal  card-custom">
-                    <div class="card-image">
-                      <i class="material-icons  icons-custom">supervisor_account</i>               
-                    </div>
-                    <div class="card-stacked">
-                      <div class="card-content text-white valign-wrapper">
-                        <p class="valign">Violencia Intrafamiliar</p>
-                      </div>                      
-                    </div>
-                  </div>
-                </div>
-                <div class="col s6 m3">
-                  <div class="card horizontal  card-custom">
-                    <div class="card-image">
-                      <i class="fa fa-gavel  icons-custom" aria-hidden="true"></i>
-                    </div>
-                    <div class="card-stacked">
-                      <div class="card-content text-white valign-wrapper">
-                        <p class="valign">Antecedentes Judiciales</p>
-                      </div>                      
-                    </div>
-                  </div>
-                </div>
-                <div class="col s6 m3">
-                  <div class="card horizontal  card-custom">
-                    <div class="card-image">
-                      <i class="material-icons  icons-custom">phonelink_lock</i>
-                    </div>
-                    <div class="card-stacked">
-                      <div class="card-content text-white valign-wrapper">
-                        <p class="valign">Celulares Recuperados</p>
-                      </div>                      
-                    </div>
-                  </div>
-                </div>
-                <div class="col s6 m3">
-                  <div class="card horizontal  card-custom">
-                    <div class="card-image">
-                      <i class="fa fa-building  icons-custom" aria-hidden="true"></i>
-                    </div>
-                    <div class="card-stacked">
-                      <div class="card-content text-white valign-wrapper">
-                        <p class="valign">Acceso a Información Pública</p>
-                      </div>                      
-                    </div>
-                  </div>
-                </div>
-
-              </div>-->
-              <!--
-              <div class="row" style="margin-bottom: 0;">
-                <div class="col s6 m3">
-                  <div class="card horizontal  card-custom">
-                    <div class="card-image">
-                      <i class="fa fa-flask icons-custom" aria-hidden="true"></i>                  
-                    </div>
-                    <div class="card-stacked">
-                      <div class="card-content text-white valign-wrapper">
-                        <p class="valign">Petición, Quejas, Reclamos y Sugerencias.</p>
-                      </div>                      
-                    </div>
-                  </div>
-                </div>
-                <div class="col s6 m3">
-                  <div class="card horizontal  card-custom">
-                    <div class="card-image">
-                      <i class="fa fa-file-text icons-custom" aria-hidden="true"></i>
-                    </div>
-                    <div class="card-stacked">
-                      <div class="card-content text-white valign-wrapper">
-                        <p class="valign">Petición, Quejas, Reclamos y Sugerencias.</p>
-                      </div>                      
-                    </div>
-                  </div>
-                </div>
-                <div class="col s6 m3">
-                  <div class="card horizontal  card-custom">
-                    <div class="card-image">
-                      <i class="fa fa-graduation-cap icons-custom" aria-hidden="true"></i>
-                    </div>
-                    <div class="card-stacked">
-                      <div class="card-content text-white valign-wrapper">
-                        <p class="valign">Petición, Quejas, Reclamos y Sugerencias.</p>
-                      </div>                      
-                    </div>
-                  </div>
-                </div>
-                <div class="col s6 m3">
-                  <div class="card horizontal  card-custom">
-                    <div class="card-image">
-                      <i class="fa fa-car icons-custom" aria-hidden="true" style="font-size: 100px;margin-left:5px;margin-top: 30px;"></i>
-                    </div>
-                    <div class="card-stacked">
-                      <div class="card-content text-white valign-wrapper">
-                        <p class="valign">Petición, Quejas, Reclamos y Sugerencias.</p>
-                      </div>                      
-                    </div>
-                  </div>
-                </div>
-
-              </div>-->
-              <!--
-              <div class="row">
-                <div class="col s6 m3">
-                  <div class="card horizontal  card-custom">
-                    <div class="card-image">
-                      <i class="fa fa-female icons-custom" aria-hidden="true"></i>             
-                    </div>
-                    <div class="card-stacked">
-                      <div class="card-content text-white valign-wrapper">
-                        <p class="valign">Atención a Mujeres</p>
-                      </div>                      
-                    </div>
-                  </div>
-                </div>
-                <div class="col s6 m2">
-                  <div class="card horizontal  card-custom">
-                    <div class="card-image">
-                      <i class="fa fa-paw icons-custom" aria-hidden="true"></i>
-                    </div>
-                    <div class="card-stacked">
-                      <div class="card-content text-white valign-wrapper">
-                        <p class="valign">Maltrato Animal.</p>
-                      </div>                      
-                    </div>
-                  </div>
-                </div>
-                <div class="col s6 m4">              
-
-                  <div class="card horizontal card-custom" style="background-color: #fff !important;">
-                    <div class="card-stacked">
-                      <div class="carousel carousel-slider center" data-indicators="true">
-                        <div class="carousel-fixed-item center">                      
-                          <a class="btn waves-effect white grey-text darken-text-2">button</a>
-                        </div>
-                        <div class="carousel-item red white-text" href="#one!">
-                          
-                          <p class="white-text">This is your first panel</p>
-                        </div>
-                        <div class="carousel-item amber white-text" href="#two!">
-                          <h2>Second Panel</h2>
-                          <p class="white-text">This is your second panel</p>
-                        </div>
-                      </div>                  
-                    </div>
-                  </div>
-                </div>
-                <div class="col s6 m3">
-                  <div class="card horizontal  card-custom">
-                    <div class="card-image">
-                      <i class="fa fa-car icons-custom" aria-hidden="true" style="font-size: 100px;margin-left:5px;margin-top: 30px;"></i>
-                    </div>
-                    <div class="card-stacked">
-                      <div class="card-content text-white valign-wrapper">
-                        <p class="valign">Petición, Quejas, Reclamos y Sugerencias.</p>
-                      </div>                      
-                    </div>
-                  </div>
-                </div>
-
-              </div>-->
+              </div>              
             </div>
-            <div id="container-info" style="display:none;opacity: 0;height: 100%;">
-              <iframe src="http://www.policia.gov.co/portal/page/portal/CONTACTENOS/Escribale_al_director" frameborder="0" allowfullscreen class="iframe-info"></iframe>
+            <div id="container-info" style="display:none;opacity: 0;float:right;height: 100%;">
+              <iframe src="" frameborder="0" allowfullscreen class="iframe-info"></iframe>
             </div>
         </div>  
-      </div>    
-      <!--<footer class="page-footer white z-depth-1">-->
+      </div>      
       <footer class="z-depth-1 white">
           <div class="container">
             <div class="row">
               <div class="footer-block footer-block-titulo">
-                <h5 style="font-weight: normal;font-size: 1.4rem;">Líneas de Emergencia</h5>
+                <h5 class="center-align" style="font-weight: normal;font-size: 1.4rem;">Líneas de Emergencia</h5>
               </div>
               <div class="footer-block">
                 <div class="left" style="width: 30%;">
@@ -429,7 +237,7 @@
                   <p>Antiterrorismo</p>
                 </div>
               </div>
-              <div class="footer-block footer-block-boton">
+              <div class="footer-block footer-block-boton center-align">
                 <a class="waves-effect waves-light btn-large modal-trigger" href="#modal1" style="font-size: 12px;padding: 0 1rem;">Información Legal</a>
               </div>
             </div>            
@@ -492,12 +300,13 @@ Nulla ut dolor accumsan, placerat arcu at, molestie mi. Ut non dui gravida, dign
 
                 $("#sidenav-overlay, .drag-target").remove();
 
-                showInfo(); 
+                showInfo();
               },1500);              
           });
 
           $("#home").click(function(){
             $('.button-collapse').sideNav({}, 'hide');
+            $(".iframe-info").attr("src", "");
             hideInfo();
             showOptions();
           });
@@ -515,6 +324,18 @@ Nulla ut dolor accumsan, placerat arcu at, molestie mi. Ut non dui gravida, dign
             showInfo();
             $('.button-collapse').sideNav('show');
           });
+
+          $("#hideNav").click(function(){
+            $("#showNav").css("display","block");
+            $("#container-info").css("width","100%");
+            $('.button-collapse').sideNav({}, 'hide');
+          });
+
+          $("#showNav").click(function(){            
+            $('.button-collapse').sideNav('show');
+            $("#mobile-demo").css("width","20%");
+            $("#container-info").css("width","80%");
+          });
           
 
         });
@@ -528,7 +349,7 @@ Nulla ut dolor accumsan, placerat arcu at, molestie mi. Ut non dui gravida, dign
         }
 
         function showOptions(){
-          
+          $("#showNav").css("display","none");
           $("#container-options").removeClass();
           $("#container-options").css("opacity","0");
           $("#container-options").css("display","block");
@@ -540,7 +361,9 @@ Nulla ut dolor accumsan, placerat arcu at, molestie mi. Ut non dui gravida, dign
         }
 
         function showInfo(){
-          $("#container-info").removeClass();
+          $("#container-info").removeClass();          
+          $("#mobile-demo").css("width","20%");
+          $("#container-info").css("width","80%");
           $("#container-info").css("display","block");
           $("#container-info").addClass("animated bounceIn"); 
         }

@@ -1,3 +1,10 @@
+.container{
+	width: 100%;
+	max-width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
 .icons-custom-nav{
 	/*color: #3c737d;*/
 	font-size: 40px;
@@ -177,7 +184,7 @@
  		left: 0;
  		bottom: 0;
  		width: 100%;
- 		height: 15%;
+ 		height: 110px;
  		border-bottom: 10px solid #009688;
  		padding-top: 25px;
  		z-index: 999;
@@ -185,7 +192,8 @@
 
  	.container-primary{
  		position: absolute;
- 		height: 85%;
+ 		height: calc(100% - 110px);
+ 		bottom: 110px;
  		width: 100%;
  	}
 
